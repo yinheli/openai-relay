@@ -22,9 +22,9 @@
     "pino-pretty": "^11.3.0"
   },
   "lint-staged": {
-    "*.{ts,tsx,js,jsx,json,md}": [
-      "biome check --apply",
-      "biome format --write"
+    "*.{ts,tsx,js,jsx,json}": [
+      "biome check --apply --no-errors-on-unmatched",
+      "biome format --write --no-errors-on-unmatched"
     ]
   }
 }

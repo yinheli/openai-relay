@@ -190,6 +190,4 @@ dist/
 .env
 .env.*
 
-.husky/_
-!.husky/
-
+!.husky

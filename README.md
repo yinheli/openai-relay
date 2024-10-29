@@ -21,10 +21,6 @@ A Simple OpenAI API relay service built with Bun runtime, supporting various Ope
 
 ### Using Helm Charts
 
-# Installation Instructions
-
-To install the OpenAI Relay service using Helm charts, follow these steps:
-
 1. **Add the Helm repository**:
    ```bash
    helm repo add openai-relay https://yinheli.github.io/openai-relay
