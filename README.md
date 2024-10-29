@@ -8,7 +8,9 @@
 ![CI-Build](https://github.com/yinheli/openai-relay/actions/workflows/build.yaml/badge.svg?branch=master)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-A Simple OpenAI API relay service built with Bun runtime, supporting various OpenAI-compatible backend services. This relay service provides seamless integration with Kubernetes through Helm charts.
+## Purpose
+
+This project is a lightweight OpenAI API relay service built with Bun runtime that enables routing requests to different OpenAI-compatible backend services based on model prefixes. It features seamless integration with Kubernetes through Helm charts for easy deployment and scaling.
 
 ## Features
 
