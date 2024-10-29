@@ -7,6 +7,7 @@ export const logger = pino({
     options: {
       colorize: false,
       ignore: 'pid,hostname',
+      singleLine: true,
     },
   },
 });
