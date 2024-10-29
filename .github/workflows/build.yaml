@@ -74,6 +74,7 @@ jobs:
       - name: Update chart version and appVersion
         run: |
           VERSION=${GITHUB_REF#refs/tags/}
+          sed -i "s/version: .*/version: \"${VERSION#v}\"/" charts/openai-relay/Chart.yaml
           sed -i "s/appVersion: .*/appVersion: \"${VERSION}\"/" charts/openai-relay/Chart.yaml
 
       - name: Run chart-releaser
