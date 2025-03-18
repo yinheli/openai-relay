@@ -96,7 +96,7 @@ docker run -d \
 ### Run directly with Deno
 
 ```bash
-deno run -A --env-file .env jsr:@yinheli/openai-relay
+deno run -A --env-file=.env jsr:@yinheli/openai-relay
 ```
 
 ## Contributors
