@@ -1,0 +1,20 @@
+{
+  "tasks": {
+    "start": "deno run -A index.ts"
+  },
+  "unstable": [
+    "detect-cjs",
+    "otel"
+  ],
+  "fmt": {
+    "lineWidth": 120,
+    "exclude": [
+      "charts"
+    ]
+  },
+  "lint": {
+    "rules": {
+      "tags": ["recommended"]
+    }
+  }
+}

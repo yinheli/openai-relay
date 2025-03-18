@@ -1,6 +1,5 @@
-FROM --platform=$BUILDPLATFORM oven/bun:1.1-debian
+FROM docker.io/denoland/deno:debian-2.2.4
 WORKDIR /app
-COPY package.json bun.lockb ./
-RUN bun install
 COPY . .
-CMD ["bun", "index.ts"]
+RUN deno install
+CMD ["deno", "run", "-A", "index.ts"]
