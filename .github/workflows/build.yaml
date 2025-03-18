@@ -81,3 +81,41 @@ jobs:
         uses: helm/chart-releaser-action@v1.6.0
         env:
           CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+
+  release-jsr:
+    runs-on: ubuntu-latest
+    if: startsWith(github.ref, 'refs/tags/')
+    permissions:
+      contents: write
+      id-token: write
+    needs: build
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Deno
+        uses: denoland/setup-deno@v1
+        with:
+          deno-version: v1.x
+
+      - name: Get Version
+        id: get_version
+        run: |
+          VERSION=${GITHUB_REF#refs/tags/}
+          echo "VERSION=${VERSION#v}" >> $GITHUB_ENV
+
+      - name: Update Version in deno.json
+        run: |
+          if [ -f deno.json ]; then
+            # Check if version field exists and update it, or add it if it doesn't exist
+            if grep -q '"version":' deno.json; then
+              sed -i 's/"version": *"[^"]*"/"version": "${{ env.VERSION }}"/' deno.json
+            else
+              # Add version field before the closing brace
+              sed -i '$ s/}$/,\n  "version": "${{ env.VERSION }}"\n}/' deno.json
+            fi
+          fi
+
+      - name: Publish to JSR
+        run: |
+          deno publish --allow-dirty

@@ -15,7 +15,7 @@ const defaultProvider: Provider = {
   models: [],
 };
 
-Deno.serve({ port: Number(Deno.env.get("PORT") ?? 7000) }, async (req) => {
+export default Deno.serve({ port: Number(Deno.env.get("PORT") ?? 7000) }, async (req) => {
   const url = new URL(req.url);
   const path = url.pathname;
 

@@ -1,4 +1,15 @@
 {
+  "name": "@yinheli/openai-relay",
+  "version": "0.2.1",
+  "description": "OpenAI Relay",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yinheli/openai-relay"
+  },
+  "exports": {
+    ".": "./index.ts"
+  },
   "tasks": {
     "start": "deno run -A index.ts"
   },

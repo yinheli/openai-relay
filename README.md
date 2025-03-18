@@ -93,6 +93,12 @@ docker run -d \
 > You can customize the environment variables to fit your needs. and pay attention to the docker image tag, you may need
 > to replace it with the release tag.
 
+### Run directly with Deno
+
+```bash
+deno run -A --env-file .env jsr:@yinheli/openai-relay
+```
+
 ## Contributors
 
 ![Contributors](https://contrib.rocks/image?repo=yinheli/openai-relay)
