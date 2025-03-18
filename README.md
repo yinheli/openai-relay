@@ -1,6 +1,5 @@
 # OpenAI Relay
 
-[![Bun](https://img.shields.io/badge/Runtime-Bun-brightgreen)](https://bun.sh)
 ![Kubernetes](https://img.shields.io/badge/kubernetes-%23326ce5.svg?style=flat&logo=kubernetes&logoColor=white)
 ![Helm](https://img.shields.io/badge/helm-%230F1689.svg?style=flat&logo=helm&logoColor=white)
 [![Docker Pulls](https://img.shields.io/docker/pulls/yinheli/openai-relay)](https://hub.docker.com/r/yinheli/openai-relay)
@@ -10,7 +9,9 @@
 
 ## Purpose
 
-This project is a lightweight OpenAI API relay service built with Bun runtime that enables routing requests to different OpenAI-compatible backend services based on model prefixes. It features seamless integration with Kubernetes through Helm charts for easy deployment and scaling.
+This project is a lightweight OpenAI API relay service that enables routing requests to different OpenAI-compatible
+backend services based on model prefixes. It features seamless integration with Kubernetes through Helm charts for easy
+deployment and scaling.
 
 ## Features
 
@@ -38,8 +39,8 @@ This project is a lightweight OpenAI API relay service built with Bun runtime th
    helm install openai-relay openai-relay/openai-relay
    ```
 
-4. **Configuration**:
-   You can customize the installation by providing a `values.yaml` file. Below are the default values you can override:
+4. **Configuration**: You can customize the installation by providing a `values.yaml` file. Below are the default values
+   you can override:
 
    ```yaml
    replicaCount: 1
@@ -70,8 +71,7 @@ This project is a lightweight OpenAI API relay service built with Bun runtime th
      RELAY_API_KEY_SILICONCLOUD: sk-siliconcloud-api-key
    ```
 
-5. **Accessing the Service**:
-   Once installed, you can access the service through the specified service type and port.
+5. **Accessing the Service**: Once installed, you can access the service through the specified service type and port.
 
 For more detailed configuration options, refer to the `values.yaml` and `config.ts` file in the repository.
 
@@ -90,17 +90,17 @@ docker run -d \
 ```
 
 > [!NOTE]
-> You can customize the environment variables to fit your needs. and pay attention to the docker image tag, you may need to replace it with the release tag.
-
+> You can customize the environment variables to fit your needs. and pay attention to the docker image tag, you may need
+> to replace it with the release tag.
 
 ## Contributors
 
 ![Contributors](https://contrib.rocks/image?repo=yinheli/openai-relay)
 
-
 ## Contributing
 
-We welcome contributions to improve the OpenAI Relay service. Please see our [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines on how to submit improvements and bug fixes.
+We welcome contributions to improve the OpenAI Relay service. Please see our [CONTRIBUTING.md](CONTRIBUTING.md) for
+guidelines on how to submit improvements and bug fixes.
 
 ## License
 
