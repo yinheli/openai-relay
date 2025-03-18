@@ -1,6 +1,6 @@
 {
   "name": "@yinheli/openai-relay",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "OpenAI Relay",
   "license": "MIT",
   "repository": {
@@ -27,5 +27,8 @@
     "rules": {
       "tags": ["recommended"]
     }
+  },
+  "imports": {
+    "@std/dotenv": "jsr:@std/dotenv@^0.225.3"
   }
 }

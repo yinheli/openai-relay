@@ -144,4 +144,7 @@ export async function handler(req: Request): Promise<Response> {
   }
 }
 
-export const server: Deno.HttpServer<Deno.NetAddr> = Deno.serve({ port: Number(Deno.env.get("PORT") ?? 7000) }, handler);
+export const server: Deno.HttpServer<Deno.NetAddr> = Deno.serve(
+  { port: Number(Deno.env.get("PORT") ?? 7000) },
+  handler,
+);

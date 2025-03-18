@@ -1,3 +1,4 @@
+import "@std/dotenv/load";
 import type { Config } from "./types.ts";
 
 function parseProviderConfig(): Config {
