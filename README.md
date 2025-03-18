@@ -15,7 +15,7 @@ deployment and scaling.
 
 ## Features
 
-- 🚀 Built with Bun runtime
+- 🚀 Built with Deno runtime
 - 🔄 Compatible with OpenAI API specification
 - 🎮 Easy configuration through environment variables
 - 🚢 Kubernetes deployment support with Helm charts
