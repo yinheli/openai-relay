@@ -1,4 +1,4 @@
-FROM docker.io/denoland/deno:debian-2.2.4
+FROM docker.io/denoland/deno:debian-2.4.0
 WORKDIR /app
 COPY . .
 RUN deno install
