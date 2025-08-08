@@ -2,6 +2,16 @@ apiVersion: v1
 entries:
   openai-relay:
   - apiVersion: v2
+    appVersion: v0.2.5
+    created: "2025-08-08T14:44:53.755877259Z"
+    description: A Helm chart for Kubernetes
+    digest: bd45ff9f4a15d5bf0930e4d3beba964ab4a685144d3dbf35c2765ea12ccc119d
+    name: openai-relay
+    type: application
+    urls:
+    - https://github.com/yinheli/openai-relay/releases/download/openai-relay-0.2.5/openai-relay-0.2.5.tgz
+    version: 0.2.5
+  - apiVersion: v2
     appVersion: v0.2.4
     created: "2025-07-07T02:03:13.016375925Z"
     description: A Helm chart for Kubernetes
@@ -81,4 +91,4 @@ entries:
     urls:
     - https://github.com/yinheli/openai-relay/releases/download/openai-relay-0.1.0/openai-relay-0.1.0.tgz
     version: 0.1.0
-generated: "2025-07-07T02:03:13.01641548Z"
+generated: "2025-08-08T14:44:53.755915751Z"
