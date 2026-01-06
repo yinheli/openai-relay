@@ -141,7 +141,7 @@ export async function handler(req: Request): Promise<Response> {
   }
 }
 
-export const server = Bun.serve({
+export const server: ReturnType<typeof Bun.serve> = Bun.serve({
   port: Number(Bun.env.PORT ?? 7000),
   fetch: handler,
 })
