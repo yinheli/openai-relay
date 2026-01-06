@@ -1,5 +1,12 @@
-FROM docker.io/denoland/deno:debian-2.4.3
+FROM docker.io/oven/bun:1
 WORKDIR /app
-COPY . .
-RUN deno install
-CMD ["deno", "run", "-A", "index.ts"]
+
+COPY package.json bun.lock ./
+RUN bun install --production
+
+COPY *.ts ./
+
+RUN chown -R bun:bun /app
+USER bun
+
+CMD ["bun", "run", "index.ts"]
