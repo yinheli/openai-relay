@@ -15,10 +15,11 @@ deployment and scaling.
 
 ## Features
 
-- 🚀 Built with Deno runtime
+- 🚀 Built with Bun runtime (also supports Deno and Node.js)
 - 🔄 Compatible with OpenAI API specification
 - 🎮 Easy configuration through environment variables
 - 🚢 Kubernetes deployment support with Helm charts
+- 📦 Available on JSR and npm
 
 ## Installation
 
@@ -93,11 +94,39 @@ docker run -d \
 > You can customize the environment variables to fit your needs. and pay attention to the docker image tag, you may need
 > to replace it with the release tag.
 
-### Run directly with Deno
+### Run directly
+
+This project is built with Bun but also supports Deno and Node.js. Choose your preferred runtime:
+
+#### Option 1: Bun (Recommended)
+
+```bash
+# Install dependencies
+bun install
+
+# Run the service
+bun run index.ts
+```
+
+Or using bunx without installation:
+
+```bash
+bunx --bun @yinheli/openai-relay
+```
+
+#### Option 2: Deno
 
 ```bash
 deno run -A --env-file=.env jsr:@yinheli/openai-relay
 ```
+
+#### Option 3: Node.js / npx
+
+```bash
+npx @yinheli/openai-relay
+```
+
+All runtimes require the same environment variables for configuration.
 
 ## Contributors
 
